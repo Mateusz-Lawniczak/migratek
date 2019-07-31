@@ -22,7 +22,7 @@ driver.find_element_by_name("login").click()
 time.sleep(10)
 driver.find_element_by_id("http://www.parallels.com/ccp-domains#domainsapp-navigation").click()
 time.sleep(10)
-driver.switch_to.frame("http://www.parallels.com/ccp-domains")  #tak korzystają z ramki do parallels
+driver.switch_to.frame("http://www.parallels.com/ccp-domains")  #tak korzystaja z ramki do parallels
 
 
 
@@ -116,12 +116,12 @@ for i in range(1, ile+1):
 				print("problem z pobraniem wpisu domeny ")
 
 	except:
-		print("nie ma rekordów")
+		print("nie ma rekordow")
 	driver.switch_to.default_content()
 	driver.find_element_by_id("http://www.parallels.com/ccp-domains#domainsapp-navigation").click()
 	time.sleep(10)
 	driver.switch_to.frame("http://www.parallels.com/ccp-domains")
 	logfile.write(text)
 	logfile.close()
-#driver.stop_client()
-#driver.close()
+driver.stop_client()
+driver.close()
